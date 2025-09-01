@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Школа Price Action от Нила Фуллера</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-image: url(bg.jpg);
+            background-size: contain;
+            animation: gradientBG 15s ease infinite;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+            
+        }
+        
+        .chapter-list {
+            list-style-type: none;
+            counter-reset: chapter-counter;
+        }
+        
+        .chapter-item {
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            counter-increment: chapter-counter;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .chapter-item::before {
+            content: counter(chapter-counter);
+            background: linear-gradient(to right, #4ca1af, #2c3e50);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background: #e9ecef;
+        }
+        
+        .chapter-link {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            display: block;
+            flex-grow: 1;
+            transition: color 0.3s ease;
+        }
+        
+        .chapter-link:hover {
+            color: #4ca1af;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: #ecf0f1;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+            
+            .chapter-item {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Школа Price Action от Нила Фуллера</h1>
+            <p class="subtitle">Изучение профессионального трейдинга</p>
+        </header>
+        
+        <div class="content">
+            <ol class="chapter-list">
+                <li class="chapter-item">
+                    <a href="Что такое Прайс Экшн.html" class="chapter-link">Что такое Price Action</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Почему не надо торговать по новостям.html" class="chapter-link">Почему я не торгую по новостям</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Как строить линии поддержки и сопротивления.html" class="chapter-link">Линии поддержки и сопротивления</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Технический анализ трендов.html" class="chapter-link">Анализ трендов</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Торговля по трендам.html" class="chapter-link">Тренды: практика</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Пинбар_ полная инструкция.html" class="chapter-link">Пинбар</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Ложные пробои уровня.html" class="chapter-link">Ложный пробой</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Внутренний бар в Price Action.html" class="chapter-link">Внутренний бар</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Fakey_ сетап Фейки.html" class="chapter-link">Фейки</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Японские свечи с хвостом.html" class="chapter-link">Хвостатые свечи</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Зоны событий в Price Action.html" class="chapter-link">Зоны событий</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Внутридневная торговля на 1- и 4-часовых графиках.html" class="chapter-link">Торговля внутри дня: 1 и 4 часа</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Как торговать структурно.html" class="chapter-link">Структурный трейдинг</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Торговый план в форексе.html" class="chapter-link">Торговый план</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Правильная торговая психология.html" class="chapter-link">Торговая психология</a>
+                </li>
+                <li class="chapter-item">
+                    <a href="Как трейдинг становится путешествием.html" class="chapter-link">Трейдинг — это путешествие</a>
+                </li>
+            </ol>
+        </div>
+        
+        <footer>
+            <p>Школа Price Action от Нила Фуллера © 2023</p>
+        </footer>
+    </div>
+</body>
+</html>
